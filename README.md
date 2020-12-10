@@ -1,0 +1,2 @@
+# Replacing-the-case-of-letters-normal-version-
+#include #include  using namespace std;  int main() { char str[] = "Something"; char *start, *end, *p; int len; int t;  cout &lt;&lt; "The strart string :  " &lt;&lt; str &lt;&lt; "\n";  len = strlen(str);  start = str; end = &amp;str[len - 1];  p = str; while(*p){ if(isupper(*p)) *p = tolower(*p); else if(islower(*p)) *p = toupper(*p); p++; }  while(start &lt; end){     t = *start;     *start = *end;     *end = t;      start++;     end--; }  cout &lt;&lt; "The reversed string:  " &lt;&lt; str;  return 0; }
